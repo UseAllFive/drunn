@@ -1,3 +1,7 @@
+$homepageInputWidth: rem(357);
+$homepageSubmitWidth: rem(298);
+$homepageInputHeight: rem(58);
+
 .homepage {
     background-image: url(/img/runner.jpg);
     background-size: cover;
@@ -20,29 +24,38 @@
 .homepageForm {
     @include clearfix();
     margin: 0 auto;
-    width: 527px;
+    width: $homepageInputWidth + $homepageSubmitWidth;
 }
 
 .homepageInput {
     @include padding(null rem(20));
-    @include size(rem(357) rem(58));
+    @include size($homepageInputWidth $homepageInputHeight);
     background-color: #fff;
     border: 6px solid #1691bd;
     color: #1691bd;
     float: left;
     font-size: rem(24);
     line-height: rem(58);
+    opacity: 0.8;
+    &:focus,
+    &:hover {
+        opacity: 1;
+        outline: none;
+    }
 }
 
 .homepageSubmit {
     @include padding(null rem(20));
-    @include size(rem(170) rem(58));
+    @include size($homepageSubmitWidth $homepageInputHeight);
     @include transition(opacity 0.25s);
     background-color: #1691bd;
     border: none;
     color: #fff;
     float: left;
-    &:hover {
-        opacity: 0.8;
+    font-size: rem(24);
+    opacity: 0.8;
+    &:hover,
+    &:focus {
+        opacity: 1;
     }
 }
