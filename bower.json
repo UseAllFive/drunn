@@ -28,5 +28,8 @@
     "polyfillLocationOrigin": "~0.1.1",
     "marionette.babyBird": "~0.1.4",
     "marionette.regionChildCloseEvent": "~0.0.4"
+  },
+  "resolutions": {
+    "jquery": "~2.1.1"
   }
 }
