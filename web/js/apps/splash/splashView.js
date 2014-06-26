@@ -3,8 +3,11 @@ define([
     'modernizr',
     'hbars!apps/splash/templates/layout',
     'hbars!apps/splash/templates/item',
-    'appExtensions/globals'
-], function(App, Modernizr, layoutTemplate, itemTemplate) {
+    'hbars!apps/splash/templates/slideshow',
+    'hbars!apps/splash/templates/slide',
+    'appExtensions/globals',
+    'jquery-cycle2'
+], function(App, Modernizr, layoutTemplate, itemTemplate, slideshowTemplate, slideTemplate) {
 
     App.module('Splash.View', function(View, App, Backbone, Marionette, $, _) {
 
@@ -15,7 +18,8 @@ define([
 
             // Define regions
             regions: {
-                contentRegion: '.contentRegion'
+                contentRegion: '.contentRegion',
+                slideshowRegion: '.slideshowRegion'
             }
         });
 
@@ -27,6 +31,33 @@ define([
             },
             triggers: {
 
+            }
+        });
+
+        View.Slide = Marionette.ItemView.extend({
+            className: 'slide',
+            template: slideTemplate,
+            tagName: 'li'
+        });
+
+        View.Slideshow = Marionette.CompositeView.extend({
+            className: 'slideshowx',
+            template: slideshowTemplate,
+            childViewContainer: 'ul',
+            childView: View.Slide,
+            ui: {},
+            trigger: {},
+            onShow: function() {
+                console.log(this.$el);
+                this.slideshow = this.$el.cycle({
+                    next: '.next',
+                    pager: '.pager',
+                    paused: false,
+                    prev: '.prev',
+                    slides: '.slide',
+                    // Enable touch support
+                    // swipe: true
+                });
             }
         });
 

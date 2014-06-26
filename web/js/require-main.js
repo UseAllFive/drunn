@@ -20,6 +20,7 @@
             Handlebars: '../vendor/handlebars/handlebars',
             hbars: '../vendor/requirejs-handlebars/hbars',
             jquery: '../vendor/jquery/dist/jquery',
+            'jquery-cycle2': '../vendor/jquery-cycle2/build/jquery.cycle2',
             marionette: '../vendor/backbone.marionette/lib/core/backbone.marionette',
             'marionette.babyBird': '../vendor/marionette.babyBird/lib/marionette.babyBird',
             'marionette.regionChildCloseEvent': '../vendor/marionette.regionChildCloseEvent/lib/marionette.regionChildCloseEvent',
@@ -48,7 +49,8 @@
             },
             twitter: {
                 exports: 'twttr'
-            }
+            },
+            'jquery-cycle2': ['jquery']
         },
         hbars: {
             extension: '.hbs'

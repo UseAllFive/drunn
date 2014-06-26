@@ -268,7 +268,7 @@ module.exports = function(grunt) {
                 options: {
                     livereload: config.liveReloadPort
                 },
-                files: ['web/css/main.css'].concat(watchRequireFiles.dest)
+                files: ['web/css/main.css', 'web/js/**/*.hbs', 'web/js/**/*/*.js']
             },
             require: {
                 options: {
