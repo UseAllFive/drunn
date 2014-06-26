@@ -31,6 +31,10 @@ define([
             },
             triggers: {
 
+            },
+            onShow: function() {
+                // Set homepage to 100% height
+                this.$('.homepage').css('min-height', $(window).height());
             }
         });
 

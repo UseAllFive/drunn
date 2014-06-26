@@ -1,0 +1,48 @@
+.homepage {
+    background-image: url(/img/runner.jpg);
+    background-size: cover;
+    padding-top: rem(60);
+    position: relative;
+}
+
+.homepageVideo {
+    border: 6px solid #dc6264;
+    display: block;
+    margin: 50px auto;
+}
+
+.drunnLogo {
+    display: block;
+    margin: 0 auto;
+    width: rem(140);
+}
+
+.homepageForm {
+    @include clearfix();
+    margin: 0 auto;
+    width: 527px;
+}
+
+.homepageInput {
+    @include padding(null rem(20));
+    @include size(rem(357) rem(58));
+    background-color: #fff;
+    border: 6px solid #1691bd;
+    color: #1691bd;
+    float: left;
+    font-size: rem(24);
+    line-height: rem(58);
+}
+
+.homepageSubmit {
+    @include padding(null rem(20));
+    @include size(rem(170) rem(58));
+    @include transition(opacity 0.25s);
+    background-color: #1691bd;
+    border: none;
+    color: #fff;
+    float: left;
+    &:hover {
+        opacity: 0.8;
+    }
+}
