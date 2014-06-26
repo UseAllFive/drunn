@@ -253,10 +253,6 @@ module.exports = function(grunt) {
         symlink: {
             options: {
                 overwrite: true
-            },
-            'pre-commit-hook': {
-                src: 'pre-commit-hook.sh',
-                dest: '.git/hooks/pre-commit'
             }
         },
         watch: {
@@ -316,7 +312,6 @@ module.exports = function(grunt) {
     // vendor requirements are installed locally.
     // see: https://github.com/GoogleCloudPlatform/appengine-python-flask-skeleton/issues/1
     devTasks = [
-        'symlink:pre-commit-hook',
         'sass',
         'svgstore',
         'prepare_livereload',
