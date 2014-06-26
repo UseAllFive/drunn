@@ -142,7 +142,7 @@ module.exports = function(grunt) {
         },
         open: {
             deploy: {
-                path: 'http://<%= grunt.config("bump.increment") ? sanitizeVersion(pkg.version) : "' + username + '" %>.app.appspot.com'
+                path: 'http://<%= grunt.config("bump.increment") ? sanitizeVersion(pkg.version) : "' + username + '" %>.ua5workshop.appspot.com'
             }
         },
         'phantom-crawler': {
