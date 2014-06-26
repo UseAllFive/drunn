@@ -338,7 +338,6 @@ module.exports = function(grunt) {
         //-- dist,
         'sass',
         'requirejs:prod',
-        'groc:normal',
 
         //-- deploy
         'gae:deploy',
