@@ -5,6 +5,7 @@ define(['app',
 
         SplashApp.Controller = Marionette.Controller.extend({
             show: function() {
+                var aboutView;
                 var contentView;
                 var layout;
                 var slides;
@@ -26,6 +27,7 @@ define(['app',
                 ]);
 
                 // Define the views
+                aboutView = new View.About();
                 layout = new View.Layout();
                 contentView = new View.Item();
                 slideshowView = new View.Slideshow({collection: slides});
@@ -37,6 +39,8 @@ define(['app',
                     layout.contentRegion.show(contentView);
 
                     layout.slideshowRegion.show(slideshowView);
+
+                    layout.aboutRegion.show(aboutView);
                 });
 
                 // Show the layout.

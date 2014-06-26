@@ -1,13 +1,14 @@
 define([
     'app',
     'modernizr',
+    'hbars!apps/splash/templates/about',
     'hbars!apps/splash/templates/layout',
     'hbars!apps/splash/templates/item',
     'hbars!apps/splash/templates/slideshow',
     'hbars!apps/splash/templates/slide',
     'appExtensions/globals',
     'jquery-cycle2'
-], function(App, Modernizr, layoutTemplate, itemTemplate, slideshowTemplate, slideTemplate) {
+], function(App, Modernizr, aboutTemplate, layoutTemplate, itemTemplate, slideshowTemplate, slideTemplate) {
 
     App.module('Splash.View', function(View, App, Backbone, Marionette, $, _) {
 
@@ -18,8 +19,20 @@ define([
 
             // Define regions
             regions: {
+                aboutRegion: '.aboutRegion',
                 contentRegion: '.contentRegion',
                 slideshowRegion: '.slideshowRegion'
+            }
+        });
+
+        View.About = Marionette.ItemView.extend({
+            className: 'aboutItem',
+            template: aboutTemplate,
+            ui: {
+
+            },
+            triggers: {
+
             }
         });
 
@@ -52,13 +65,12 @@ define([
             ui: {},
             trigger: {},
             onShow: function() {
-                console.log(this.$el);
                 this.slideshow = this.$el.cycle({
                     next: '.next',
                     pager: '.pager',
                     paused: false,
                     prev: '.prev',
-                    slides: '.slide',
+                    slides: '.slide'
                     // Enable touch support
                     // swipe: true
                 });
