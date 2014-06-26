@@ -20,7 +20,7 @@ define([
     var App = new Marionette.Application();
     // Add regions
     App.addRegions({
-        // regionName: .className
+        drunnRegion: '.drunnRegion'
     });
     // Fires after the Application has started and after the initializers
     // have been executed.
@@ -28,7 +28,7 @@ define([
         // Start the history. All subapps must be loaded prior, or any routing
         // inside of them will not work.
         require([
-            // apps/...
+            'apps/splash/splashApp'
         ], function() {
             if (Backbone.history) {
                 Backbone.history.start({
@@ -45,17 +45,19 @@ define([
     App.getCurrentRoute = function() {
         return Backbone.history.fragment;
     };
+
     // Initializer callback. Fires when the application has started.
     App.addInitializer(function(options) {
         // Start apps
-        // require(['...'], function() {
-            // App.module('...').start();
-        // });
+        require(['apps/splash/SplashApp'], function() {
+            App.module('Splash').start();
+        });
         // Remove 300ms delay on mobile clicks.
         require(['fastclick'], function(fastClick) {
             fastClick.attach(document.body);
         });
     });
+
     // Handlbar helpers
     require(['Handlebars'], function(Handlebars) {
         // Allow logging in handlebar templates
