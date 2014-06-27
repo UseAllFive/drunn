@@ -4,8 +4,13 @@
 .slideshow .img {
     position: relative;
     width: 853px;
-    height: 724px;
     font-size: 24px;
+}
+
+.slideshow,
+.slideshow.slide,
+.slideshow .img {
+    height: 724px;
 }
 
 .slideshow .slide {
@@ -40,7 +45,7 @@
 }
 
 .slideshow .next {
-    right: rem(-50);
+    right: rem(50);
     @include transform(rotate(180deg));
     @include transform-origin(50% rem(8));
 }
@@ -62,4 +67,9 @@
     text-align: center;
     color: #fff;
     margin-top: rem(50);
+}
+
+.slideshow ul {
+    margin: 0;
+    padding: 0;
 }
