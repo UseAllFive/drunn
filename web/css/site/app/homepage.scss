@@ -64,27 +64,42 @@ $homepageInputHeight: rem(58);
     @include padding(rem(50) null);
 }
 
-.aboutImage {
+.aboutImage,
+.shareImage {
     width: 100%;
 }
 
-.aboutInfo {
+.aboutInfo,
+.shareInfo {
     // Make up for padding in the image
     padding-top: rem(100);
     text-align: center;
 }
 
-.aboutTitle {
+.aboutTitle,
+.shareTitle {
     font-size: rem(40);
     margin-bottom: rem(50);
 }
 
-.aboutList {
+.aboutList,
+.shareList {
     @extend %listUnstyled;
 }
 
-.aboutListItem {
+.aboutListItem,
+.shareListItem {
     margin-top: rem(20);
     font-size: rem(18);
 }
+
+.share {
+    @include linear-gradient(to bottom, #e1e1e1, #fff);
+    @include padding(rem(50) null);
+}
+
+.shareImage {
+    margin-left: rem(-80);
+}
+
 
