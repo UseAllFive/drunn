@@ -78,7 +78,7 @@ define([
             onShow: function() {
                 this.slideshow = this.$('ul').cycle({
                     next: '.next',
-                    paused: false,
+                    paused: true,
                     prev: '.prev',
                     slides: '.slide',
                     fx: 'none',
