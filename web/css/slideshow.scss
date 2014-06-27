@@ -51,6 +51,15 @@
 }
 
 .slideshowWrap {
-    left: 50%;
     @include transform(translateX(-50%));
+    @include user-select(none);
+    left: 50%;
+    overflow: hidden;
+}
+
+.slideshowTitle {
+    font-size: rem(40);
+    text-align: center;
+    color: #fff;
+    margin-top: rem(50);
 }
