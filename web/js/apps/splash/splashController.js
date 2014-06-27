@@ -8,6 +8,7 @@ define(['app',
                 var aboutView;
                 var contentView;
                 var layout;
+                var shareView;
                 var slides;
                 var slideshowView;
 
@@ -62,6 +63,7 @@ define(['app',
                 aboutView = new View.About();
                 layout = new View.Layout();
                 contentView = new View.Item();
+                shareView = new View.Share();
                 slideshowView = new View.Slideshow({collection: slides});
 
                 // When the layout is shown, add it's children.
@@ -73,6 +75,9 @@ define(['app',
                     layout.slideshowRegion.show(slideshowView);
 
                     layout.aboutRegion.show(aboutView);
+
+                    layout.shareRegion.show(shareView);
+
                 });
 
                 // Show the layout.

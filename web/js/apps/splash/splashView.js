@@ -4,11 +4,12 @@ define([
     'hbars!apps/splash/templates/about',
     'hbars!apps/splash/templates/layout',
     'hbars!apps/splash/templates/item',
+    'hbars!apps/splash/templates/share',
     'hbars!apps/splash/templates/slideshow',
     'hbars!apps/splash/templates/slide',
     'appExtensions/globals',
     'jquery-cycle2'
-], function(App, Modernizr, aboutTemplate, layoutTemplate, itemTemplate, slideshowTemplate, slideTemplate) {
+], function(App, Modernizr, aboutTemplate, layoutTemplate, itemTemplate, shareTemplate, slideshowTemplate, slideTemplate) {
 
     App.module('Splash.View', function(View, App, Backbone, Marionette, $, _) {
 
@@ -21,6 +22,7 @@ define([
             regions: {
                 aboutRegion: '.aboutRegion',
                 contentRegion: '.contentRegion',
+                shareRegion: '.shareRegion',
                 slideshowRegion: '.slideshowRegion'
             }
         });
@@ -48,6 +50,17 @@ define([
             onShow: function() {
                 // Set homepage to 100% height
                 this.$('.homepage').css('min-height', $(window).height());
+            }
+        });
+
+        View.Share = Marionette.ItemView.extend({
+            className: 'shareItem',
+            template: shareTemplate,
+            ui: {
+
+            },
+            triggers: {
+
             }
         });
 
