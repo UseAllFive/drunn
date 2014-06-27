@@ -81,7 +81,8 @@ define([
                     paused: false,
                     prev: '.prev',
                     slides: '.slide',
-                    fx: 'none'
+                    fx: 'none',
+                    speed: 1
                     // Enable touch support
                     // swipe: true
                 });

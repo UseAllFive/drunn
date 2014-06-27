@@ -26,18 +26,23 @@
 .slideshow .next {
     @include position(absolute, 50% null null null);
     @include transform(translateY(-50%));
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
+    fill: black;
     z-index: 200;
+    cursor: pointer;
+    fill: #fff;
+    height: rem(31);
+    opacity: 1;
+    width: rem(20);
 }
 
 .slideshow .prev {
-    left: 10%;
+    left: rem(50);
 }
 
 .slideshow .next {
-    right: 10%;
+    right: rem(-50);
+    @include transform(rotate(180deg));
+    @include transform-origin(50% rem(8));
 }
 
 .slideshowRegion {
