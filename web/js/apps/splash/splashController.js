@@ -56,6 +56,10 @@ define(['app',
                     {
                         image: 'img/slideshow/_0009_10.png',
                         caption: 'sample 10'
+                    },
+                    {
+                        image: 'img/slideshow/_0009_11.png',
+                        caption: 'sample 11'
                     }
                 ]);
 
