@@ -1,0 +1,40 @@
+.slideshow,
+.slideshow.slide,
+.slideshow .img {
+    position: relative;
+    width: 853px;
+    height: 724px;
+    font-size: 24px;
+}
+
+.slideshow .slide {
+    .img {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .caption {
+        @include position(absolute, null 0 20px 0);
+        color: white;
+        display: none;
+        text-align: center;
+    }
+}
+
+.slideshow .prev,
+.slideshow .next {
+    @include position(absolute, 50% null null null);
+    @include transform(translateY(-50%));
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.slideshow .prev {
+    left: 10%;
+}
+
+.slideshow .next {
+    right: 10%;
+}

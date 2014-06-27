@@ -13,16 +13,48 @@ define(['app',
 
                 slides = new Backbone.Collection([
                     {
-                        image: 'http://www.goneforarun.com/v/vspfiles/photos/tr-09492-2.jpg'
+                        image: 'img/slideshow/_0000_0.png',
+                        caption: 'sample 0'
                     },
                     {
-                        image: 'http://www.goneforarun.com/v/vspfiles/photos/tr-09492-2.jpg'
+                        image: 'img/slideshow/_0000_1.png',
+                        caption: 'sample 1'
                     },
                     {
-                        image: 'http://www.goneforarun.com/v/vspfiles/photos/tr-09492-2.jpg'
+                        image: 'img/slideshow/_0001_2.png',
+                        caption: 'sample 2'
                     },
                     {
-                        image: 'http://www.goneforarun.com/v/vspfiles/photos/tr-09492-2.jpg'
+                        image: 'img/slideshow/_0002_3.png',
+                        caption: 'sample 3'
+                    },
+                    {
+                        image: 'img/slideshow/_0003_4.png',
+                        caption: 'sample 4'
+                    },
+                    {
+                        image: 'img/slideshow/_0004_5.png',
+                        caption: 'sample 5'
+                    },
+                    {
+                        image: 'img/slideshow/_0005_6.png',
+                        caption: 'sample 6'
+                    },
+                    {
+                        image: 'img/slideshow/_0006_7.png',
+                        caption: 'sample 7'
+                    },
+                    {
+                        image: 'img/slideshow/_0007_8.png',
+                        caption: 'sample 8'
+                    },
+                    {
+                        image: 'img/slideshow/_0008_9.png',
+                        caption: 'sample 9'
+                    },
+                    {
+                        image: 'img/slideshow/_0009_10.png',
+                        caption: 'sample 10'
                     }
                 ]);
 

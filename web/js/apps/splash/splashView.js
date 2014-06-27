@@ -58,19 +58,17 @@ define([
         });
 
         View.Slideshow = Marionette.CompositeView.extend({
-            className: 'slideshowx',
+            className: 'slideshow',
             template: slideshowTemplate,
             childViewContainer: 'ul',
             childView: View.Slide,
-            ui: {},
-            trigger: {},
             onShow: function() {
-                this.slideshow = this.$el.cycle({
+                this.slideshow = this.$('ul').cycle({
                     next: '.next',
-                    pager: '.pager',
                     paused: false,
                     prev: '.prev',
-                    slides: '.slide'
+                    slides: '.slide',
+                    fx: 'none'
                     // Enable touch support
                     // swipe: true
                 });
