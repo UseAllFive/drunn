@@ -59,3 +59,33 @@ $homepageInputHeight: rem(58);
         opacity: 1;
     }
 }
+
+.about {
+    @include padding(rem(50) null);
+}
+
+.aboutImage {
+    width: 100%;
+}
+
+.aboutInfo {
+    // Make up for padding in the image
+    padding-top: rem(100);
+    text-align: center;
+}
+
+.aboutTitle {
+    @extend %openSansBold;
+    font-size: rem(24);
+    margin-bottom: rem(50);
+}
+
+.aboutList {
+    @extend %listUnstyled;
+}
+
+.aboutListItem {
+    margin-top: rem(20);
+    font-size: rem(18);
+}
+
