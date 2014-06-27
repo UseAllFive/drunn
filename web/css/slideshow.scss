@@ -1,3 +1,4 @@
+.slideshowWrap,
 .slideshow,
 .slideshow.slide,
 .slideshow .img {
@@ -37,4 +38,14 @@
 
 .slideshow .next {
     right: 10%;
+}
+
+.slideshowRegion {
+    background-color: #373b3e;
+    position: relative;
+}
+
+.slideshowWrap {
+    left: 50%;
+    @include transform(translateX(-50%));
 }

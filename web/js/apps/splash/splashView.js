@@ -58,7 +58,7 @@ define([
         });
 
         View.Slideshow = Marionette.CompositeView.extend({
-            className: 'slideshow',
+            className: 'slideshowWrap',
             template: slideshowTemplate,
             childViewContainer: 'ul',
             childView: View.Slide,
